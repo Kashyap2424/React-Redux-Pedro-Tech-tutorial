@@ -6,9 +6,12 @@ import { configureStore } from "@reduxjs/toolkit";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import useReducer from "./Features/user";
 
 const reduxStore = configureStore({
-  reducer: {},
+  reducer: {
+    user: useReducer,
+  },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
