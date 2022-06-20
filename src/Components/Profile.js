@@ -1,14 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
+  const user = useSelector((state) => state.userDetails.value);
+
   return (
     <div>
       <h1>Hello, This is the profile page.</h1>
       <ul>
-        <li>Name: </li>
-        <li>Age: </li>
-        <li>Email: </li>
-        <li>Phone Number: </li>
+        <li>Name: {user.name}</li>
+        <li>Age: {user.age}</li>
+        <li>Email: {user.email}</li>
+        <li>Phone Number: {user.phoneNumber}</li>
       </ul>
     </div>
   );
