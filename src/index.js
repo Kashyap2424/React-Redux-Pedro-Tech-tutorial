@@ -7,10 +7,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import userReducer from "./Features/user";
+import themeReducer from "./Features/theme";
 
 const reduxStore = configureStore({
   reducer: {
     userDetails: userReducer,
+    applicationTheme: themeReducer,
   },
 });
 

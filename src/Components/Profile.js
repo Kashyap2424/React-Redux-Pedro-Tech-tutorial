@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 
 const Profile = () => {
   const user = useSelector((state) => state.userDetails.value);
+  const themeColor = useSelector((state) => state.applicationTheme.value);
 
   return (
-    <div>
+    <div style={{ color: themeColor }}>
       <h1>Hello, This is the profile page.</h1>
       <ul>
         <li>Name: {user.name}</li>
